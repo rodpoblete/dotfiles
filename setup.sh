@@ -74,16 +74,29 @@ install()
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
   print "ZSH Shell Installed"
 
+  # Clonamos e instalamos plugins de ZSH SHELL
+  # Syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+  echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+  # zsh-autosuggestions 
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  # K
+  git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
+  print "Plugins ZSH installed"
+
   # Instalamos Vim Plugged && Neovim
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   sudo apt-get install -y neovim
   print "Neovim installed"
+
+  sudo apt install fzf -y
+  print "fzf installed"
 }
 
 if [ "$1" = "install" ]
 then
   install
 else
-  throw "Invalid command, available values are 'install' or 'run'"
+  throw "Invalid command, available values are 'install'"
 fi
