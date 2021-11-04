@@ -1,20 +1,20 @@
-NC='\\033[0m'
+NC="\\033[0m"
 
 throw()
 {
-  COLOR='\\033[0;31m'
+  COLOR="\\033[0;31m"
   >&2 echo -e ${COLOR}$1${NC}
 }
 
 print()
 {
-  COLOR='\\033[0;32m'
+  COLOR="\\033[0;32m"
   echo -e ${COLOR}$1${NC}
 }
 
 warn()
 {
-  COLOR='\\033[0;33m'
+  COLOR="\\033[0;33m"
   echo -e ${COLOR}$1${NC}
 }
 
@@ -52,11 +52,9 @@ install()
   print "Git & GitHub configured"
 
   # Instalamos Node en la versión 16 && npm
-	cd ~ 
   sudo apt install curl -y
-	curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh~
+	curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 	sudo bash nodesource_setup.sh
-	sleep 2.5
 	sudo apt install nodejs -y
   print "Node.js installed"
 
@@ -66,18 +64,21 @@ install()
   sudo apt install -y python3-pip
   sudo apt install build-essential libssl-dev libffi-dev python3-dev -y
   sudo apt install -y python3-venv
+  print "Python3 && dependencies installed"
 
   # Instalamos ZSH && OMYZSH
   sudo apt install zsh -y
   zsh --version
   sleep 2.5
-  chsh -s $(which zsh)
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  chsh -s $(which zsh) -y
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+  print "ZSH Shell Installed"
 
   # Instalamos Vim Plugged && Neovim
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   sudo apt-get install -y neovim
+  print "Neovim installed"
 }
 
 if [ "$1" = "install" ]
