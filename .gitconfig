@@ -1,0 +1,7 @@
+[user]
+	name = Rodrigo Poblete
+	email = rodrigopoblete.dev@gmail.com
+[core]
+	editor = nvim
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%Creset %C(white)%ci\n%C(yellow) %s%n%d'
