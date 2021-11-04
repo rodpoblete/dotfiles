@@ -93,6 +93,9 @@ install()
 
   sudo apt install fzf -y
   print "fzf installed"
+
+  sudo apt install tmux -y
+  print "Tmux installed"
 }
 
 if [ "$1" = "install" ]
