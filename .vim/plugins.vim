@@ -41,9 +41,16 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
+Plug 'github/copilot.vim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'wakatime/vim-wakatime'
+
+" Search
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " git
-Plug 'tpope/vim-fugitive'
 
 Plug 'tpope/vim-repeat'
 

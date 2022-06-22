@@ -99,3 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias nvim="~/nvim.appimage"
+alias cvenv="python3 -m venv venv"
+alias avenv="source venv/bin/activate"
+alias ytaudio="youtube-dl --extract-audio --audio-format mp3"

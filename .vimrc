@@ -8,20 +8,25 @@ set ruler
 set cursorline
 set encoding=utf-8
 set showmatch
-set termguicolors
 set sw=2
 set relativenumber
+set colorcolumn=80
 so ~/.vim/plugins.vim
 so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
+set termguicolors
+
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
-highlight Normal ctermbg=NONE
+" highlight Normal ctermbg=NONE
+
+highlight Normal     ctermbg=NONE guibg=NONE
+highlight LineNr     ctermbg=NONE guibg=NONE
+highlight SignColumn ctermbg=NONE guibg=NONE
+
 set laststatus=2
 set noshowmode
 
-au BufNewFile,BufRead *.html set filetype=htmldjango
 lua require'colorizer'.setup()
 
 "" Searching
