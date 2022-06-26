@@ -15,6 +15,7 @@ nnoremap <Leader>; $a;<Esc>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
+
 " shorter commands
 cnoreabbrev tree NERDTreeToggle
 cnoreabbrev blame Gblame
@@ -93,6 +94,12 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
   inoremap <silent><expr> <c-space> coc#refresh()
 "endif
 
+" Prettier
+nmap <Leader>py <Plug>(Prettier)
+
+" Speeling
+nnoremap <silent> <F12> :set spell!<cr>
+inoremap <silent> <F12> <C-O>:set spell!<cr>
 
 set splitright
 function! OpenTerminal()

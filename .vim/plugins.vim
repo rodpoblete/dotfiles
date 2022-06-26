@@ -11,6 +11,7 @@ Plug 'itchyny/lightline.vim'
 
 " Themes
 Plug 'morhetz/gruvbox'
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 Plug 'shinchu/lightline-gruvbox.vim'
 
 " Tree
@@ -44,6 +45,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'github/copilot.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'wakatime/vim-wakatime'
+Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
 
 " Search
 Plug 'nvim-lua/plenary.nvim'

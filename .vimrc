@@ -17,15 +17,25 @@ so ~/.vim/maps.vim
 
 set termguicolors
 
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_transparent_bg = 1
+let g:gruvbox_italicize_comments = 1
+
 colorscheme gruvbox
-" highlight Normal ctermbg=NONE
 
 highlight Normal     ctermbg=NONE guibg=NONE
-highlight LineNr     ctermbg=NONE guibg=NONE
-highlight SignColumn ctermbg=NONE guibg=NONE
+" highlight LineNr     ctermbg=NONE guibg=NONE
+" highlight SignColumn ctermbg=NONE guibg=NONE
 
 set laststatus=2
 set noshowmode
+set spelllang=es,en
+set spellsuggest=best,9
+
+" Prettier config format on save
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 lua require'colorizer'.setup()
 
