@@ -13,6 +13,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'ryanoasis/vim-devicons'
 
 " Tree
 Plug 'scrooloose/nerdtree'
@@ -46,6 +48,8 @@ Plug 'github/copilot.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'wakatime/vim-wakatime'
 Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'jiangmiao/auto-pairs'
 
 " Search
 Plug 'nvim-lua/plenary.nvim'
@@ -55,5 +59,5 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " git
 
 Plug 'tpope/vim-repeat'
-
+ 
 call plug#end()

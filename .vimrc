@@ -11,22 +11,29 @@ set showmatch
 set sw=2
 set relativenumber
 set colorcolumn=80
+set encoding=UTF-8
 so ~/.vim/plugins.vim
 so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
 set termguicolors
 
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:gruvbox_transparent_bg = 1
-let g:gruvbox_italicize_comments = 1
+" let g:gruvbox_bold = 1
+" let g:gruvbox_italic = 1
+" let g:gruvbox_transparent_bg = 1
+" let g:gruvbox_italicize_comments = 1
 
-colorscheme gruvbox
+" colorscheme gruvbox
+
+colorscheme dracula
 
 highlight Normal     ctermbg=NONE guibg=NONE
-" highlight LineNr     ctermbg=NONE guibg=NONE
-" highlight SignColumn ctermbg=NONE guibg=NONE
+highlight LineNr     ctermbg=NONE guibg=NONE
+highlight SignColumn ctermbg=NONE guibg=NONE
+
+let g:lightline = {
+  \ 'colorscheme': 'dracula'
+\}
 
 set laststatus=2
 set noshowmode
