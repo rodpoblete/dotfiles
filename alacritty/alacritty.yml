@@ -78,10 +78,10 @@ font:
     family: CaskaydiaCove Nerd Font
     style: Bold
   italic:
-    family: CaskaydiaCove Nerd Font
+    family: Cascadia Code PL
     style: Italic
   bold_italic:
-    family: CaskaydiaCove Nerd Font
+    family: Cascadia Code PL
     style: Bold Italic
 
   # Point size
