@@ -18,22 +18,21 @@ so ~/.vim/maps.vim
 
 set termguicolors
 
-" let g:gruvbox_bold = 1
-" let g:gruvbox_italic = 1
-" let g:gruvbox_transparent_bg = 1
-" let g:gruvbox_italicize_comments = 1
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_transparent_bg = 1
+let g:gruvbox_italicize_comments = 1
 
-" colorscheme gruvbox
+colorscheme gruvbox
 
-colorscheme dracula
+" colorscheme dracula
 
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
 
-let g:lightline = {
-  \ 'colorscheme': 'dracula'
-\}
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 " Icons font config
 set guifont=CaskaydiaCove\ Nerd\ Font:h14
