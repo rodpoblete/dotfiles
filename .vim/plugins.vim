@@ -13,7 +13,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 Plug 'ryanoasis/vim-devicons'
 
 " Tree

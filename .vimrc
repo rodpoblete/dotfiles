@@ -18,13 +18,23 @@ so ~/.vim/maps.vim
 
 set termguicolors
 
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:gruvbox_transparent_bg = 1
-let g:gruvbox_italicize_comments = 1
+" Example config in VimScript
+let g:gruvbox_baby_function_style = "bold"
+let g:gruvbox_baby_keyword_style = "italic"
 
-colorscheme gruvbox
+" Enable telescope theme
+let g:gruvbox_baby_telescope_theme = 1
 
+" Enable transparent mode
+let g:gruvbox_baby_transparent_mode = 1
+
+" let g:gruvbox_bold = 1
+" let g:gruvbox_italic = 1
+" let g:gruvbox_transparent_bg = 1
+" let g:gruvbox_italicize_comments = 1
+
+" colorscheme gruvbox
+color gruvbox-baby
 " colorscheme dracula
 
 highlight Normal     ctermbg=NONE guibg=NONE
@@ -37,6 +47,9 @@ let g:lightline.colorscheme = 'gruvbox'
 " Icons font config
 set guifont=CaskaydiaCove\ Nerd\ Font:h14
 let g:airline_powerline_fonts = 1
+
+" Nerdtree config
+let g:NERDTreeWinPos = "right"
 
 set laststatus=2
 set noshowmode
