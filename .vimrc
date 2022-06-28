@@ -35,6 +35,10 @@ let g:lightline = {
   \ 'colorscheme': 'dracula'
 \}
 
+" Icons font config
+set guifont=CaskaydiaCove\ Nerd\ Font:h14
+let g:airline_powerline_fonts = 1
+
 set laststatus=2
 set noshowmode
 set spelllang=es,en
