@@ -6,15 +6,16 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'norcalli/nvim-colorizer.lua'
 
 " status bar
-Plug 'maximbaz/lightline-ale'
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Themes
-Plug 'morhetz/gruvbox'
-Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 Plug 'ryanoasis/vim-devicons'
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
+Plug 'ellisonleao/gruvbox.nvim'
+Plug 'joshdick/onedark.vim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
