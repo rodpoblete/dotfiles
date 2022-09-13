@@ -30,7 +30,7 @@ highlight SignColumn ctermbg=NONE guibg=NONE
 let g:airline_theme='onedark'
 
 " Icons font config
-set guifont=JetbrainsMono\Nerd\Font\11
+set guifont=JetBrainsMono\Nerd\Font\11
 let g:airline_powerline_fonts = 1
 
 " Nerdtree config
