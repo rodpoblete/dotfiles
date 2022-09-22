@@ -16,6 +16,7 @@ Plug 'tjdevries/colorbuddy.vim'
 Plug 'tjdevries/gruvbuddy.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'joshdick/onedark.vim'
+Plug 'ayu-theme/ayu-vim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
