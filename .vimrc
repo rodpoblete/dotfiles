@@ -18,16 +18,17 @@ so ~/.vim/maps.vim
 
 set termguicolors
 
-colorscheme onedark
-let g:onedark_terminal_italics=1
-
+" colorscheme onedark
+" let g:onedark_terminal_italics=1
+let ayucolor="mirage"
+colorscheme ayu
 " lua require('colorbuddy').colorscheme('gruvbuddy')
 
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
 
-let g:airline_theme='onedark'
+let g:airline_theme='ayu_mirage'
 
 " Icons font config
 set guifont=JetBrainsMono\Nerd\Font\11
