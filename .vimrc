@@ -18,27 +18,55 @@ so ~/.vim/maps.vim
 
 set termguicolors
 
-lua << EOF
-require("onedark").setup({
-  functionStyle = "italic",
-  sidebars = {"qf", "vista_kind", "terminal", "packer"},
-	customTelescope = true,
+let g:catppuccin_flavour = "mocha" " latte, frappe, macchiato, mocha
 
-  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  colors = {hint = "orange", error = "#ff0000"}
+lua << EOF
+require("catppuccin").setup({
+	flavour = "mocha", -- latte, frappe, macchiato, mocha
+	background = { -- :h background
+		light = "latte",
+		dark = "mocha",
+	},
+	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
+	transparent_background = false,
+	term_colors = false,
+	dim_inactive = {
+		enabled = false,
+		shade = "dark",
+		percentage = 0.15,
+	},
+	styles = {
+		comments = { "italic" },
+		conditionals = { "italic" },
+		loops = {},
+		functions = {},
+		keywords = { "bold" },
+		strings = {},
+		variables = {},
+		numbers = {},
+		booleans = {},
+		properties = {},
+		types = {},
+		operators = {},
+	},
+	color_overrides = {},
+	integrations = {
+		cmp = true,
+		gitsigns = true,
+		nvimtree = true,
+		telescope = true,
+		treesitter = true,
+		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+	},
+	custom_highlights = {},
 })
 EOF
 
-lua require('onedark').setup()
-" let ayucolor="mirage"
-" colorscheme ayu
+colorscheme catppuccin
 
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
-
-" let g:airline_theme='ayu_mirage'
-let g:lightline = {'colorscheme': 'onedark'}
 
 " Icons font config
 set guifont=JetBrainsMono\Nerd\Font\11
@@ -72,31 +100,15 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 " Treesiter Config (LUA)
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all"
-  ensure_installed = { "typescript", "javascript", "json", "markdown", "python", "html", "css", "typescript", "vim", "lua", "yaml" },
-
+  ensure_installed = { "typescript", "javascript", "json", "markdown", "markdown_inline", "python", "html", "css", "typescript", "vim", "lua", "yaml" },
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
-
   -- Automatically install missing parsers when entering buffer
   auto_install = true,
-
-  -- List of parsers to ignore installing (for "all")
-  -- ignore_install = { "javascript" },
-
-  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
-
-    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-    -- the name of the parser)
-    -- list of language that will be disabled
     disable = { "c", "rust" },
-    -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     disable = function(lang, buf)
         local max_filesize = 100 * 1024 -- 100 KB
         local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
@@ -104,11 +116,6 @@ require'nvim-treesitter.configs'.setup {
             return true
         end
     end,
-
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
 }

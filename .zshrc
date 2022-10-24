@@ -10,6 +10,10 @@ ENABLE_CORRECTION="true"
 export EDITOR='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
 
+# Java PATH
+export JAVA_HOME=/opt/java/jdk-19
+export PATH=$PATH:$JAVA_HOME/bin
+
 # Aliases
 alias nvim="~/nvim.appimage"
 alias cvenv="python3 -m venv venv"
