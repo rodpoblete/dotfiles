@@ -17,8 +17,6 @@ Plug 'tjdevries/gruvbuddy.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }|
-Plug 'rktjmp/lush.nvim'
-Plug 'kartikp10/noctis.nvim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
