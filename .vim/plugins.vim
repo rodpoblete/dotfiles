@@ -15,8 +15,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tjdevries/colorbuddy.vim'
 Plug 'tjdevries/gruvbuddy.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }|
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'https://gitlab.com/__tpb/monokai-pro.nvim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
