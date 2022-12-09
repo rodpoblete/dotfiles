@@ -30,15 +30,13 @@ require("catppuccin").setup({
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false,
+    transparent_background = true,
     term_colors = false,
     dim_inactive = {
         enabled = false,
         shade = "dark",
         percentage = 0.15,
     },
-    no_italic = false, -- Force no italic
-    no_bold = false, -- Force no bold
     styles = {
         comments = { "italic" },
         conditionals = { "italic" },
@@ -61,7 +59,7 @@ require("catppuccin").setup({
         nvimtree = true,
         telescope = true,
         notify = false,
-        mini = false,
+        mini = true,
     },
 })
 vim.cmd.colorscheme "catppuccin"
@@ -72,6 +70,9 @@ colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-m
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
+
+let g:python3_host_prog = "/usr/bin/python3""
+
 
 " lightline theme
 let g:lightline = {'colorscheme': 'catppuccin'}
